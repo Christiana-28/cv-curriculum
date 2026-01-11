@@ -1,0 +1,160 @@
+/* =========================
+   CSS Variables
+========================= */
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --header-background: #007bff;
+    --card-background: #ffffff;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+}
+
+/* =========================
+   Header
+========================= */
+header {
+    background: var(--header-background);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header .profile-photo {
+    width: 120px;
+    height: 120px;
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: cover;
+    border-radius: 70%;
+    border: 4px solid white;
+    display: block;
+    margin: 0 auto 12px auto;
+}
+
+.subtitle {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* =========================
+   Main Layout
+========================= */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================
+   Sections
+========================= */
+section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    background: var(--card-background);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Decorative line above sections */
+section::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--header-background);
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (min-width: 600px) {
+    nav ul li {
+        margin-right: 30px;
+    }
+}
+
+/* =========================
+   Print Styles
+========================= */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    nav {
+        display: none;
+    }
+
+    section {
+        page-break-inside: avoid;
+        border: 1px solid #ccc;
+    }
+
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: var(--header-background);
+    color: white;
+}
+
