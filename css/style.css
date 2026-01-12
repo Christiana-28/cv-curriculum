@@ -86,6 +86,26 @@ main.cv-layout {
     align-items: start;
 }
 
+/* Sidebar (left column) */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Content (right column) */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sections inside grid should fill their column */
+.cv-layout section {
+    width: 100%;
+    max-width: none;
+}
+
 /* =========================
    CV Layout (Two Columns)
 ========================= */
