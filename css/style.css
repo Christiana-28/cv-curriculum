@@ -140,17 +140,20 @@ main.cv-layout {
 /* =========================
    Sections
 ========================= */
+/* Remove top margin from the very first section in each column */
+.sidebar section:first-child,
+.content section:first-child {
+    margin-top: 0;
+}
+
 section {
     width: 100%;
-    margin-bottom: 25px; /* Spacing between cards */
+    margin-top: 0;      /* Ensure consistent start */
+    margin-bottom: 25px; 
     background: var(--card-background);
     padding: 20px;
-    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    position: relative;
-    
-    /* This replaces the floating blue line */
-    border-top: 6px solid var(--header-background); 
+    border-top: 6px solid var(--header-background);
+    box-sizing: border-box; /* Ensures padding doesn't grow the box */
 }
 
 section {
