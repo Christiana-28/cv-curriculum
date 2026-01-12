@@ -115,18 +115,14 @@ main.cv-layout {
 
 section {
     width: 100%;
-    margin-top: 0;      /* Ensure consistent start */
     margin-bottom: 25px; 
     background: var(--card-background);
-    padding: 20px;
-    border-top: 6px solid var(--header-background);
-    box-sizing: border-box; /* Ensures padding doesn't grow the box */
-}
-
-section {
+    padding: 25px 20px 20px 20px; /* Top padding is larger to space text from line */
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border-top: 6px solid var(--header-background); /* This is the new blue line */
+    box-sizing: border-box;
     position: relative;
-    padding-top: 25px; /* Added padding so text doesn't touch the line */
-    /* keep your other existing section styles */
 }
 
 /* =========================
