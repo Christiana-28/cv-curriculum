@@ -80,17 +80,13 @@ main.cv-layout {
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 30px;
-    align-items: start; /* CRITICAL: This is the "top-align" button */
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
+    align-items: start; /* Forces both columns to hang from the top */
+    padding: 40px 20px;
 }
 
 .sidebar, .content {
-    padding: 0;         /* Remove all padding from the containers */
-    margin: 0;          /* Remove all margins from the containers */
-    display: flex;
-    flex-direction: column;
+    padding-top: 0 !important; /* Removes any hidden space at the top */
+    margin-top: 0 !important;
 }
 
 .sidebar section {
