@@ -74,37 +74,6 @@ nav ul li a:hover {
 }
 
 /* =========================
-   Main Layout
-========================= */
-main.cv-layout {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 20px;
-    padding: 20px;
-    align-items: start;
-}
-
-/* Sidebar (left column) */
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Content (right column) */
-.content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Sections inside grid should fill their column */
-.cv-layout section {
-    width: 100%;
-    max-width: none;
-}
-
-/* =========================
    CV Layout (Two Columns)
 ========================= */
 main.cv-layout {
