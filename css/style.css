@@ -113,15 +113,17 @@ main.cv-layout {
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 30px;
-    align-items: start; /* Forces both columns to stay at the top */
-    padding: 40px 20px;
+    align-items: start; /* CRITICAL: This is the "top-align" button */
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .sidebar, .content {
-    padding-top: 0; /* Ensures the first section starts at the absolute top */
+    padding: 0;         /* Remove all padding from the containers */
+    margin: 0;          /* Remove all margins from the containers */
     display: flex;
     flex-direction: column;
-    gap: 10px; 
 }
 
 .sidebar section {
