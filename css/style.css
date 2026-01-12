@@ -103,10 +103,13 @@ main.cv-layout {
 /* =========================
    Sections
 ========================= */
-/* Remove top margin from the very first section in each column */
 .sidebar section:first-child,
 .content section:first-child {
     margin-top: 0;
+}
+
+section h2 {
+    margin-top: 0; /* Prevents the title from pushing the blue line up or down */
 }
 
 section {
