@@ -105,7 +105,6 @@ main.cv-layout {
         gap: 30px;
         align-items: start; /* Syncs the blue lines horizontally */
     }
-}
 
 /* Commit style: sync top alignment for sidebar and content */
 .sidebar section, .content section {
@@ -128,14 +127,13 @@ main.cv-layout {
     margin-top: 0;
 }
 
-* Commit style: fix card correlation and remove gap */
 section {
-    padding: 15px 20px 20px 20px; /* Reduced top padding to 15px */
-    display: block; /* Changed from flex to block to fix alignment issues */
     background: white;
-    border-top: 6px solid var(--header-background);
+    border-top: 6px solid var(--header-background); /* The blue line */
+    padding: 15px 20px 20px 20px; /* Pulls text up to the line */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     border-radius: 0 0 4px 4px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 section h2 {
