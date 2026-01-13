@@ -132,6 +132,15 @@ section h2 {
     font-size: 1.5rem;
 }
 
+section h2::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--header-background);
+    margin-right: 10px;
+    border-radius: 2px;
+}
 section {
     padding: 20px;
     display: flex;
