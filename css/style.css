@@ -134,18 +134,19 @@ section {
 section {
     background: white;
     border-top: 6px solid var(--header-background);
-    padding: 0 20px 20px 20px; /* Note the 0 at the start */
+    padding: 0 20px 20px 20px; /* Setting top padding to 0 kills the top gap */
     margin-bottom: 25px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    display: flex;
-    flex-direction: column;
+    display: block; /* Using block ensures the border-top stays consistent */
+    border-radius: 0 0 4px 4px;
 }
 
 section h2 {
-    margin: 0; /* This kills the white gap at the top and bottom */
-    padding-bottom: 15px; /* Adds space ONLY below the text */
-    color: var(--text-color);
+    margin: 0; /* This is the secret to removing the white gap */
+    padding-top: 15px; /* This creates space INSIDE the card, under the blue line */
+    padding-bottom: 10px;
     font-size: 1.5rem;
+    color: var(--text-color);
 }
 
 /* REMOVE the section h2::before block entirely to get rid of the blue boxes */
