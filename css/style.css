@@ -119,15 +119,12 @@ section h2 {
 }
 
 section {
-    width: 100%;
-    margin-bottom: 25px; 
-    background: var(--card-background);
-    padding: 25px 20px 20px 20px; /* Top padding is larger to space text from line */
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    border-top: 6px solid var(--header-background); /* This is the new blue line */
-    box-sizing: border-box;
-    position: relative;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+    border-top: 8px solid var(--header-background); /* The thick blue line */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* =========================
