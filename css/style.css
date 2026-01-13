@@ -126,9 +126,10 @@ main.cv-layout {
 }
 
 section h2 {
-    margin-top: 0; /* Removes the white gap at the top of the card */
-    margin-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 10px;
     color: var(--text-color);
+    font-size: 1.5rem;
 }
 
 section {
