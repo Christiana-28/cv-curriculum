@@ -110,14 +110,19 @@ main.cv-layout {
 }
 
 @media (max-width: 899px) {
-    nav ul {
-        flex-direction: column; /* Stacks links so they don't cut off */
-        align-items: center;
-        gap: 10px;
+    main.cv-layout {
+        display: flex;
+        flex-direction: column-reverse; /* Flips Content to the TOP on mobile */
+        gap: 20px;
     }
 
-    header {
-        padding: 30px 10px; /* Shrinks the giant blue header on phones */
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
