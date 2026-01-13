@@ -88,14 +88,22 @@ nav ul li a:focus {
 /* =========================
    CV Layout (Two Columns)
 ========================= */
+/* Commit style: implement mobile-first layout stack */
 main.cv-layout {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 30px;
-    align-items: start; /* This aligns the tops perfectly */
-    padding: 40px 20px;
+    display: block; /* Default for mobile: sections stack vertically */
+    padding: 20px 15px;
     margin: 0 auto;
     max-width: 1200px;
+}
+
+/* Desktop Grid: Only triggers on screens wider than 900px */
+@media (min-width: 900px) {
+    main.cv-layout {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 30px;
+        align-items: start;
+    }
 }
 
 .sidebar, .content {
