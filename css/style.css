@@ -22,11 +22,6 @@ body {
     color: var(--text-color);
 }
 
-h1, h2, h3 {
-    color: var(--text-color);
-    margin: 0; /* Ensures no global margins cause gaps */
-}
-
 /* =========================
    Header
 ========================= */
@@ -80,10 +75,9 @@ nav ul li a:hover {
 }
 
 /* =========================
-   CV Layout (The Correct Responsive Way)
+   CV Layout (Responsive)
 ========================= */
-
-/* Mobile view (Default): Everything is one straight column */
+/* Mobile First: Stacks vertically by default */
 main.cv-layout {
     display: flex;
     flex-direction: column;
@@ -95,15 +89,15 @@ main.cv-layout {
 .sidebar, .content {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 25px; /* Ensures uniform spacing between all cards */
 }
 
-/* Desktop view: Columns turn on for screens 900px or wider */
+/* Desktop: Side-by-side columns only on big screens */
 @media (min-width: 900px) {
     main.cv-layout {
         display: grid;
         grid-template-columns: 320px 1fr;
-        align-items: start; /* Syncs the top blue lines perfectly */
+        align-items: start; /* Fixes the blue line horizontal alignment */
         max-width: 1200px;
         margin: 0 auto;
         gap: 30px;
@@ -111,28 +105,27 @@ main.cv-layout {
 }
 
 /* =========================
-   Sections (The Line & Gap Fix)
+   Sections (The Gap & Line Fix)
 ========================= */
 section {
     background: white;
-    border-top: 6px solid var(--header-background); /* The blue line */
+    border-top: 6px solid var(--header-background); /* The Blue Line */
     padding: 0 20px 20px 20px; /* Top padding is 0 to kill the white stuff */
-    margin: 0; /* Controlled by the container's gap instead */
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     border-radius: 0 0 4px 4px;
-    display: block; 
+    display: block; /* Ensures consistent thickness across all sections */
 }
 
 section h2 {
     margin: 0; /* Kills the gap between blue line and text */
-    padding-top: 15px; /* Adds space INSIDE the card */
+    padding-top: 15px; /* Adds space inside the card under the line */
     padding-bottom: 10px;
     font-size: 1.5rem;
     color: var(--text-color);
 }
 
 /* =========================
-   Articles & Links
+   Inner Content Spacing
 ========================= */
 #projects article {
     border-bottom: 1px solid #eee;
