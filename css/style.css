@@ -137,12 +137,10 @@ section {
 }
 
 section h2 {
-    margin-top: 0; /* Ensures the title touches the top area */
+    margin-top: 0; 
     margin-bottom: 15px;
+    font-size: 1.4rem;
     color: var(--text-color);
-    font-size: 1.5rem;
-    border-bottom: 1px solid #eee; /* Adds a clean line under the title */
-    padding-bottom: 5px;
 }
 
 /* REMOVE the section h2::before block entirely to get rid of the blue boxes */
