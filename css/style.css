@@ -33,7 +33,7 @@ header {
     background: var(--header-background);
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 40px 20px; /* Increased padding for the "banner" look */
 }
 
 header img {
