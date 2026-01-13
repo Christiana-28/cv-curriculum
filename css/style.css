@@ -80,6 +80,11 @@ nav ul li a:hover {
     border-bottom: 2px solid white; /* Visual feedback on hover */
 }
 
+nav ul li a:focus {
+    outline: 2px dashed white;
+    outline-offset: 4px;
+}
+
 /* =========================
    CV Layout (Two Columns)
 ========================= */
