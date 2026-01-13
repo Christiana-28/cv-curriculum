@@ -71,14 +71,13 @@ nav ul li a {
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
+    transition: all 0.3s ease; /* Smooth transition */
+    border-bottom: 2px solid transparent;
 }
 
 nav ul li a:hover {
-    color: var(--link-hover-color);
-    text-decoration: underline;
+    color: #e0e0e0;
+    border-bottom: 2px solid white; /* Visual feedback on hover */
 }
 
 /* =========================
