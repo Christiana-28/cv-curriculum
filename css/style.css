@@ -88,24 +88,24 @@ nav ul li a:focus {
 /* =========================
    CV Layout (Two Columns)
 ========================= */
-/* Mobile-First: Default for phones */
+/* 1. Mobile view (Default): Everything is one straight column */
 main.cv-layout {
     display: flex;
-    flex-direction: column; /* Stacks everything in one straight line */
+    flex-direction: column;
+    padding: 20px;
     gap: 20px;
-    padding: 20px 15px;
-    max-width: 100%;
 }
 
-/* Desktop: Only for screens wider than 900px */
+/* 2. Desktop view: Turn on the columns only when the screen is wide enough */
 @media (min-width: 900px) {
     main.cv-layout {
         display: grid;
         grid-template-columns: 320px 1fr;
-        gap: 30px;
-        align-items: start; /* Syncs the blue lines horizontally */
+        align-items: start; /* This forces the top lines to align */
+        max-width: 1200px;
+        margin: 0 auto;
     }
-
+}
 .sidebar, .content {
     display: flex;
     flex-direction: column;
