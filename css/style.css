@@ -56,6 +56,10 @@ header img {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex; /* Makes the list horizontal */
+    justify-content: center; /* Centers the menu */
+    flex-wrap: wrap; /* Prevents breaking on small screens */
+    gap: 20px;
 }
 
 nav ul li {
