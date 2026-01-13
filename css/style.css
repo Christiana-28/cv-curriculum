@@ -132,10 +132,14 @@ section h2 {
 }
 
 section {
-    padding: 20px; /* Adjust this value until it looks tight and professional */
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background: white; /* Ensure the card is white */
+    border-top: 6px solid var(--header-background); /* This adds the blue line back */
+    border-radius: 0 0 8px 8px; /* Optional: keeps the bottom rounded */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Adds depth */
 }
 
 /* =========================
