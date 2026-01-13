@@ -27,9 +27,13 @@ body {
 ========================= */
 header {
     background: var(--header-background);
-    color: black;
+    color: black; 
     text-align: center;
     padding: 50px 20px;
+}
+
+header h1 {
+    color: black;
 }
 
 header img {
@@ -47,7 +51,8 @@ header img {
     margin-top: 5px;
     margin-bottom: 15px;
     font-size: 1.1rem;
-    color:#e0e0e0;
+    color: white; 
+    font-weight: bold;
 }
 
 nav ul {
