@@ -109,6 +109,18 @@ main.cv-layout {
     }
 }
 
+@media (max-width: 899px) {
+    nav ul {
+        flex-direction: column; /* Stacks links so they don't cut off */
+        align-items: center;
+        gap: 10px;
+    }
+
+    header {
+        padding: 30px 10px; /* Shrinks the giant blue header on phones */
+    }
+}
+
 /* =========================
    Sections (The Gap & Line Fix)
 ========================= */
