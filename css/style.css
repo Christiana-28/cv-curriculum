@@ -36,14 +36,15 @@ header {
     padding: 1rem;
 }
 
-header .profile-photo {
-    width: 120px;
-    height: 120px;
+header img {
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid white;
     display: block;
-    margin: 0 auto 12px auto;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .subtitle {
@@ -176,15 +177,4 @@ footer {
     color: white;
 }
 
-/* 1. This locks the first card on the left and right to the exact same top pixel */
-.sidebar section:first-child,
-.content section:first-child {
-    margin-top: 0 !important;
-}
-
-/* 2. This ensures no hidden margins push the boxes down */
-section {
-    margin-top: 0;
-    box-sizing: border-box; /* Keeps the blue line inside the box boundary */
-}
 
