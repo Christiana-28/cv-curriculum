@@ -24,6 +24,7 @@ body {
 
 h1, h2, h3 {
     color: var(--text-color);
+    margin: 0; /* Ensures no global margins cause gaps */
 }
 
 /* =========================
@@ -33,7 +34,7 @@ header {
     background: var(--header-background);
     color: white;
     text-align: center;
-    padding: 50px 20px; /* More space for the banner effect */
+    padding: 50px 20px;
 }
 
 header img {
@@ -53,12 +54,13 @@ header img {
     font-size: 1.1rem;
     color: #e0e0e0;
 }
+
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex; /* Makes the list horizontal */
-    justify-content: center; /* Centers the menu */
-    flex-wrap: wrap; /* Prevents breaking on small screens */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -68,88 +70,70 @@ nav ul li a {
     font-weight: bold;
     font-size: 0.9rem;
     padding: 5px 10px;
-}
-
-nav ul li a {
-    transition: all 0.3s ease; /* Smooth transition */
+    transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
 }
 
 nav ul li a:hover {
     color: #e0e0e0;
-    border-bottom: 2px solid white; /* Visual feedback on hover */
-}
-
-nav ul li a:focus {
-    outline: 2px dashed white;
-    outline-offset: 4px;
+    border-bottom: 2px solid white;
 }
 
 /* =========================
-   CV Layout (Two Columns)
+   CV Layout (The Correct Responsive Way)
 ========================= */
-/* 1. Mobile view (Default): Everything is one straight column */
+
+/* Mobile view (Default): Everything is one straight column */
 main.cv-layout {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    gap: 20px;
+    gap: 25px;
+    max-width: 100%;
 }
 
-/* 2. Desktop view: Turn on the columns only when the screen is wide enough */
+.sidebar, .content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Desktop view: Columns turn on for screens 900px or wider */
 @media (min-width: 900px) {
     main.cv-layout {
         display: grid;
         grid-template-columns: 320px 1fr;
-        align-items: start; /* This forces the top lines to align */
+        align-items: start; /* Syncs the top blue lines perfectly */
         max-width: 1200px;
         margin: 0 auto;
+        gap: 30px;
     }
 }
-.sidebar, .content {
-    display: flex;
-    flex-direction: column;
-    gap: 25px; /* Uniform spacing between all cards */
-}
 
-section {
-    margin: 0; /* Ensures no extra margins push the cards out of alignment */
-    /* Keep your existing border-top and padding here */
-}
-
-.content {
-    padding: 0; /* Change from 10px to 0 */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 /* =========================
-   Sections
+   Sections (The Line & Gap Fix)
 ========================= */
-.sidebar section:first-child,
-.content section:first-child {
-    margin-top: 0;
-}
-
 section {
     background: white;
-    border-top: 6px solid var(--header-background);
-    padding: 0 20px 20px 20px; /* Setting top padding to 0 kills the top gap */
-    margin-bottom: 25px;
+    border-top: 6px solid var(--header-background); /* The blue line */
+    padding: 0 20px 20px 20px; /* Top padding is 0 to kill the white stuff */
+    margin: 0; /* Controlled by the container's gap instead */
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    display: block; /* Using block ensures the border-top stays consistent */
     border-radius: 0 0 4px 4px;
+    display: block; 
 }
 
 section h2 {
-    margin: 0; /* This is the secret to removing the white gap */
-    padding-top: 15px; /* This creates space INSIDE the card, under the blue line */
+    margin: 0; /* Kills the gap between blue line and text */
+    padding-top: 15px; /* Adds space INSIDE the card */
     padding-bottom: 10px;
     font-size: 1.5rem;
     color: var(--text-color);
 }
 
-/* REMOVE the section h2::before block entirely to get rid of the blue boxes */
+/* =========================
+   Articles & Links
+========================= */
 #projects article {
     border-bottom: 1px solid #eee;
     padding-bottom: 15px;
@@ -162,40 +146,14 @@ section h2 {
 }
 
 /* =========================
-   Responsive Design
-========================= */
-@media (min-width: 600px) {
-    nav ul li {
-        margin-right: 30px;
-    }
-}
-
-/* =========================
    Print Styles
 ========================= */
 @media print {
-    body {
-        background: white;
-        color: black;
-    }
-
-    nav {
-        display: none;
-    }
-
-    section {
-        page-break-inside: avoid;
-        border: 1px solid #ccc;
-    }
-
-    a {
-        color: black;
-        text-decoration: underline;
-    }
-
-    a::after {
-        content: " (" attr(href) ")";
-    }
+    body { background: white; color: black; }
+    nav, footer { display: none; }
+    section { page-break-inside: avoid; border: 1px solid #ccc; }
+    a { color: black; text-decoration: underline; }
+    a::after { content: " (" attr(href) ")"; }
 }
 
 /* =========================
@@ -203,8 +161,8 @@ section h2 {
 ========================= */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     background: var(--header-background);
     color: white;
+    margin-top: 20px;
 }
-
