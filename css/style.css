@@ -126,7 +126,9 @@ main.cv-layout {
 }
 
 section h2 {
-    margin-top: 0; /* Prevents the title from pushing the blue line up or down */
+    margin-top: 0; /* Removes the white gap at the top of the card */
+    margin-bottom: 15px;
+    color: var(--text-color);
 }
 
 section {
