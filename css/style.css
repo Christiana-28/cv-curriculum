@@ -132,12 +132,10 @@ section h2 {
 }
 
 section {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
-    border-top: 8px solid var(--header-background); /* The thick blue line */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px; /* Adjust this value until it looks tight and professional */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 /* =========================
