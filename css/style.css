@@ -117,6 +117,18 @@ section h2 {
     margin-bottom: 15px; /* Tighter space under title */
 }
 
+/* This targets the wrapper holding both the Sidebar and the Projects */
+.main-container { 
+    display: flex;
+    align-items: stretch; /* This forces both columns to be the same height */
+}
+
+/* This makes the sidebar fill that extra space */
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+}
 /* =========================
    5. FOOTER (Blue & Compact)
 ========================= */
