@@ -117,13 +117,6 @@ section h2 {
     margin-bottom: 15px; /* Tighter space under title */
 }
 
-.compact-text {
-    font-size: 0.85rem; /* Smaller font saves vertical space */
-    line-height: 1.4;   /* Controls the space between the wrapped lines */
-    margin-top: 5px;
-    color: #444;        /* A slightly softer color looks cleaner */
-    text-align: left;
-}
 /* =========================
    5. FOOTER (Blue & Compact)
 ========================= */
