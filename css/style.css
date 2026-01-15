@@ -117,22 +117,6 @@ section h2 {
     margin-bottom: 15px; /* Tighter space under title */
 }
 
-.skills-tags {
-    display: flex;       /* Put items side-by-side */
-    flex-wrap: wrap;    /* If they hit the edge, start a new line */
-    gap: 10px;          /* Space between tags */
-    margin-top: 10px;
-}
-
-.skills-tags span {
-    background-color: #007bff; /* Use your blue color */
-    color: white;
-    padding: 6px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
 /* =========================
    5. FOOTER (Blue & Compact)
 ========================= */
