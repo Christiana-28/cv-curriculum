@@ -1,1 +1,34 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/NXqbjGwb)
+# Mi Currículum Web Profesional
+
+Este proyecto es mi Curriculum Vitae en formato web, desarrollado con **HTML y CSS**.
+
+## Descripción del proyecto
+Este proyecto presenta mi información personal, formación académica, habilidades, proyectos y experiencia laboral en un diseño estructurado y profesional.
+
+# Características
+- **Diseño responsive**: Optimizado para vistas de escritorio y dispositivos móviles.  
+- **Diseño profesional**: Estructura en dos columnas con secciones organizadas para Perfil, Experiencia, Proyectos y Habilidades.  
+- **HTML semántico**: Uso de etiquetas adecuadas como <header>, <main>, <aside>, <section> y <article>.  
+- **Optimización para impresión**: Estilos personalizados para una impresión clara, incluyendo la visualización de URLs.  
+- **Estructura accesible**: Organización lógica del contenido con títulos claros y jerarquía adecuada.
+
+## Tecnologías utilizadas
+- HTML5  
+- CSS3  
+- Git y GitHub  
+- Vercel (despliegue)
+
+## Sitio web en vivo
+https://my-professional-web-cv.vercel.app/
+
+## Estructura del proyecto
+cv-project/
+│── index.html  
+│── css/  
+│   └── style.css  
+│── assets/  
+│   └── photo.jpg  
+│── README.md  
+
+## Autor
+Christiana Ogunjobi
