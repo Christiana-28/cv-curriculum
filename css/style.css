@@ -130,9 +130,8 @@ section h2 {
     margin-bottom: 15px; 
 }
 /* =========================
-   5. PSEUDO-ELEMENT (REQUIRED)
+   5. PSEUDO-ELEMENT 
 ========================= */
-
 section h2::after {
     content: "";
     display: block;
@@ -142,41 +141,34 @@ section h2::after {
     margin-top: 8px;
 }
 
-
-
-
-
 /* =========================
-   5. PRINT STYLES
+   6. PRINT STYLES
 ========================= */
 @media print {
-    body {
-        background: white;
-        color: black;
+    nav, .menu-links { 
+        display: none !important; 
     }
 
-    nav {
-        display: none; /* Hide menu when printing */
+    /* 2. Show the URL next to every link (The Hint) */
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8rem;
+        color: #555;
     }
 
     section {
+        border-top: 2px solid var(--primary-blue);
+        margin: 10px 0 !important;
         page-break-inside: avoid;
-        border: 1px solid #ccc;
     }
 
-    /* Show URLs when printing — 🔹 REQUIRED BY TEACHER */
-    a {
-        color: black;
-        text-decoration: underline;
-    }
-
-    a::after {
-        content: " (" attr(href) ")";
+    body {
+        background: white !important;
+        font-size: 11pt;
     }
 }
-
 /* =========================
-   6. FOOTER (Blue & Compact)
+   7. FOOTER (Blue & Compact)
 ========================= */
 footer {
     background-color: #007bff;
